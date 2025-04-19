@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vivek's Project Showcase</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            color: #fff;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        
+        .header {
+            position: sticky;
+            top: 0;
+            padding: 1.5rem;
+            background: rgba(15, 12, 41, 0.9);
+            backdrop-filter: blur(10px);
+            text-align: center;
+            z-index: 100;
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .title {
+            font-size: 2.5rem;
+            background: linear-gradient(90deg, #ff8a00, #e52e71);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+        }
+        
+        .subtitle {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1rem;
+        }
+        
+        .container {
+            padding: 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+        
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 1.8rem;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            text-decoration: none;
+        }
+        
+        .card:hover {
+            transform: translateY(-10px) scale(1.03);
+            box-shadow: 0 15px 30px rgba(229, 46, 113, 0.3);
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 138, 0, 0.5);
+        }
+        
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, #ff8a00, #e52e71);
+        }
+        
+        .card-number {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 3rem;
+            font-weight: bold;
+            color: rgba(255, 255, 255, 0.05);
+        }
+        
+        .card-title {
+            color: #fff;
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+            font-weight: 600;
+        }
+        
+        .card-text {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        
+        .footer {
+            padding: 2rem;
+            text-align: center;
+            margin-top: 3rem;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+                padding: 1rem;
+            }
+            
+            .title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <h1 class="title">Vivek's Project Showcase</h1>
+        <p class="subtitle">Interactive collection of web development projects</p>
+    </header>
+
+    <div class="container" id="cardContainer">
+        <!-- Cards will be added here -->
+    </div>
+
+    <footer class="footer">
+        <p>© 2025 | Created by Vivek S Nair</p>
+    </footer>
+
+    <script>
+        const projects = [
+            { file: "ques1.html", title: "HTML Skeleton", desc: "Basic HTML document structure" },
+            { file: "ques2.html", title: "CSS Styling", desc: "Linking CSS and styling elements" },
+            { file: "ques3.html", title: "Semantic HTML", desc: "Using proper semantic elements" },
+            { file: "ques4.html", title: "Box Model", desc: "Understanding padding, margin, border" },
+            { file: "ques5.html", title: "Styled Lists", desc: "Creating ordered and unordered lists" },
+            { file: "ques6.html", title: "Data Tables", desc: "Building tables with merged cells" },
+            { file: "ques7.html", title: "Web Forms", desc: "Creating interactive forms" },
+            { file: "ques8.html", title: "Form Validation", desc: "Validating form inputs" },
+            { file: "ques9.html", title: "Flexbox Nav", desc: "Navigation using flexbox" },
+            { file: "ques10.html", title: "CSS Grid", desc: "Photo gallery with grid layout" },
+            { file: "ques11.html", title: "Responsive Design", desc: "Adapting to screen sizes" },
+            { file: "ques12.html", title: "Mobile First", desc: "Mobile-first approach" },
+            { file: "ques13.html", title: "CSS Position", desc: "Positioning elements" },
+            { file: "ques14.html", title: "Transitions", desc: "CSS transition effects" },
+            { file: "ques15.html", title: "Animations", desc: "Creating CSS animations" },
+            { file: "ques16.html", title: "Units", desc: "PX vs REM comparison" },
+            { file: "ques17.html", title: "Image Gallery", desc: "Responsive image grid" },
+            { file: "ques18.html", title: "Hero Section", desc: "Attractive header section" },
+            { file: "ques19.html", title: "Final Showcase", desc: "Complete project collection" }
+        ];
+
+        const container = document.getElementById('cardContainer');
+        
+        projects.forEach((project, index) => {
+            const card = document.createElement('a');
+            card.className = 'card';
+            card.href = project.file;
+            
+            card.innerHTML = `
+                <div class="card-number">${index + 1}</div>
+                <h3 class="card-title">${project.title}</h3>
+                <p class="card-text">${project.desc}</p>
+            `;
+            
+            container.appendChild(card);
+            
+            // Verify file existence
+            fetch(project.file)
+                .then(response => {
+                    if (!response.ok) {
+                        console.warn(`File not found: ${project.file}`);
+                        card.style.border = "2px dashed red";
+                    }
+                })
+                .catch(error => {
+                    console.error(`Error accessing ${project.file}:`, error);
+                    card.style.border = "2px dashed red";
+                });
+        });
+    </script>
+</body>
+</html>

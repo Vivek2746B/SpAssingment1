@@ -1,0 +1,89 @@
+/* Reset and global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    font-size: 16px;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1a1a1a, #333);
+    color: #fff;
+    min-height: 100vh;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  /* Header */
+  header {
+    margin-bottom: 2rem;
+  }
+  
+  h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5rem;
+    color: #f9d342;
+    text-shadow: 2px 2px #000;
+  }
+  
+  header p {
+    font-size: 1rem;
+    color: #ccc;
+    margin-top: 0.5rem;
+  }
+  
+  /* Sections */
+  .card-section {
+    margin: 2rem auto;
+    max-width: 600px;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .card-section:hover {
+    transform: scale(1.02);
+  }
+  
+  .px-section {
+    background: #2a2a72;
+  }
+  
+  .rem-section {
+    background: #009ffd;
+  }
+  
+  /* Cards */
+  .card {
+    margin-top: 1rem;
+    padding: 20px; /* px-based padding */
+    border: 2px dashed #fff;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(6px);
+    color: #f0f0f0;
+  }
+  
+  .px-card {
+    width: 300px; /* px-based sizing */
+    margin: auto;
+  }
+  
+  .rem-card {
+    width: 18rem; /* rem-based sizing (18rem = 288px if base is 16px) */
+    margin: auto;
+  }
+  
+  /* Footer */
+  footer {
+    margin-top: 4rem;
+    font-size: 0.9rem;
+    color: #aaa;
+  }
+  

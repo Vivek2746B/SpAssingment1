@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CSS Positioning Power 💃</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f8f9fa;
+      color: #333;
+    }
+
+    /* 🎯 Header */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #111;
+      color: white;
+      padding: 1rem 2rem;
+      text-align: center;
+      font-size: 1.8rem;
+      font-weight: bold;
+      z-index: 1000;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    main {
+      margin-top: 100px;
+      padding: 2rem;
+      max-width: 900px;
+      margin-inline: auto;
+    }
+
+    /* 🌐 Social Icons */
+    .social-icons {
+      position: fixed;
+      top: 150px;
+      left: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      z-index: 1001;
+    }
+
+    .social-icons a {
+      width: 45px;
+      height: 45px;
+      background-color: #333;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      text-decoration: none;
+      font-size: 20px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .social-icons a:hover {
+      transform: scale(1.15);
+      background-color: #e91e63;
+    }
+
+    /* 🎨 Sections */
+    section {
+      margin-bottom: 2.5rem;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    h2 {
+      margin-top: 0;
+      font-size: 1.6rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    /* Relative Section */
+    .relative-section {
+      position: relative;
+      background: #ffe082;
+    }
+
+    .absolute-box {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: #d81b60;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 0.85rem;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Sticky Section */
+    .sticky-section {
+      position: sticky;
+      top: 80px;
+      background: #b2ebf2;
+      border: 2px dashed #0097a7;
+    }
+
+    /* Static Section */
+    .static-section {
+      position: static;
+      background: #c8e6c9;
+    }
+
+    /* Responsive media */
+    @media (max-width: 768px) {
+      .social-icons {
+        flex-direction: row;
+        top: auto;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(255, 255, 255, 0.7);
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    CSS Positioning Power 💃
+  </header>
+
+  <!-- 🎯 Social Media Icons -->
+  <div class="social-icons">
+    <a href="#" title="Thumbs Up">👍</a>
+    <a href="#" title="Comment">💬</a>
+    <a href="#" title="Camera">📸</a>
+  </div>
+
+  <main>
+    <!-- 🎯 Relative Section -->
+    <section class="relative-section">
+      <h2>🎯 Relative Positioning</h2>
+      <p>This section is <strong>relatively</strong> positioned — like the center of attention on the dance floor.</p>
+      <div class="absolute-box">🔥 Absolute inside Relative</div>
+    </section>
+
+    <!-- 🧲 Sticky Section -->
+    <section class="sticky-section">
+      <h2>🧲 Sticky Dancer</h2>
+      <p>This sticky section stays with you as you scroll... vibing to the rhythm.</p>
+    </section>
+
+    <!-- 🌻 Static Section -->
+    <section class="static-section">
+      <h2>🌻 Static Wallflowers</h2>
+      <p>This section uses the default static position — just chilling in its natural flow.</p>
+    </section>
+  </main>
+
+</body>
+</html>

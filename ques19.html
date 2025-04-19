@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Supercars Footer</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #0f0f0f;
+      color: white;
+      display: flex;
+      flex-direction: column;
+    }
+
+    main {
+      flex: 1;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    footer {
+      background: linear-gradient(45deg, #111, #1a1a1a);
+      padding: 2rem 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      color: #eee;
+    }
+
+    .footer-column {
+      flex: 1;
+      min-width: 200px;
+      margin: 1rem;
+    }
+
+    .footer-column h3 {
+      color: #f40009;
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+    }
+
+    .footer-column a {
+      display: block;
+      text-decoration: none;
+      color: #aaa;
+      margin: 0.5rem 0;
+      transition: color 0.3s ease;
+    }
+
+    .footer-column a:hover {
+      color: #f40009;
+    }
+
+    .social-icons a {
+      display: inline-block;
+      margin-right: 10px;
+      font-size: 1.5rem;
+      color: #f40009;
+      transition: transform 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      transform: scale(1.2);
+    }
+
+    .contact-info p {
+      margin: 0.5rem 0;
+      color: #ccc;
+    }
+
+    @media (max-width: 768px) {
+      footer {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .footer-column {
+        margin: 1rem 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <main>
+    <h1>Welcome to SuperDrive</h1>
+    <p>Your #1 destination for the world’s fastest supercars.</p>
+  </main>
+
+  <footer>
+    <div class="footer-column contact-info">
+      <h3>Get in Touch</h3>
+      <p>SuperDrive HQ</p>
+      <p>Email: speed@superdrive.com</p>
+      <p>Phone: +91 98765 43210</p>
+    </div>
+
+    <div class="footer-column social-icons">
+      <h3>Follow the Vibe</h3>
+      <a href="#">🚗</a>
+      <a href="#">📸</a>
+      <a href="#">📱</a>
+      <a href="#">🐦</a>
+    </div>
+
+    <div class="footer-column">
+      <h3>Navigate</h3>
+      <a href="#">Home</a>
+      <a href="#">About Supercars</a>
+      <a href="#">Models</a>
+      <a href="#">Dealers</a>
+      <a href="#">Test Drive</a>
+    </div>
+  </footer>
+
+</body>
+</html>
